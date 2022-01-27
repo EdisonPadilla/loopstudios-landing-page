@@ -1,11 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+/* Primary */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 main {
@@ -13,10 +39,68 @@ main {
 }
 
 header {
+  height: 100vh;
+  /*padding: 45px 5%;*/
   background-image: url(../images/mobile/image-hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--white);
+}
+
+header nav {
+  position: relative;
+  padding: 45px 5% 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: black;*/
+}
+
+.nav-brand {
+  width: 120px;
+  height: 25px;
+}
+
+.ham-btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.ham-btn span {
+  display: block;
+  height: 3px;
+  width: 28px;
+  margin: 10px auto;
+  background-color: var(--white);
+  border-radius: 2px;
+}
+
+.nav-menu {
+  visibility: hidden;
+  overflow: hidden;
+  padding: 50% 5%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+}
+
+.header-title {
+  width: 90%;
+  margin: 50% auto;
+  padding: 15px;
+  border: 1px solid var(--white);
+}
+
+.section-interactive-vr {
+  text-align: center;
+  padding: 75px 5%;
 }
 
 .img-interactive-vr {
@@ -28,6 +112,23 @@ header {
   background-size: cover;
 }
 
+.section-interactive-vr .title {
+  margin: 30px 0 15px 0;
+}
+
+.section-interactive-vr p {
+  color: var(--dark-gray);
+}
+
+.section-our-creations {
+  padding: 0 5% 75px 5%;
+}
+
+.section-our-creations .title {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
 .deep-earth,
 .night-arcade,
 .soccer-team,
@@ -37,6 +138,10 @@ header {
 .curiosity,
 .make-fisheye {
   height: 200px;
+  margin: 0 0 15px 0;
+  padding: 100px 0 0 5%;
+  font-size: 20px;
+  color: var(--white);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
