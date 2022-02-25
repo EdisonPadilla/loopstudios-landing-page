@@ -223,3 +223,155 @@ header nav {
 .copyright {
   color: var(--dark-gray);
 }
+
+@media (min-width: 1024px) {
+  header {
+    height: 100vh;
+    /*padding: 45px 5%;*/
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+  }
+
+  header nav {
+    padding: 45px 10% 0 10%;
+  }
+
+  .nav-brand {
+    width: 150px;
+    height: auto;
+  }
+
+  .ham-btn {
+    visibility: hidden;
+    position: absolute;
+    right: 10%;
+  }
+
+  .nav-menu {
+    visibility: visible;
+    overflow: visible;
+    padding: 0;
+    position: initial;
+    top: initial;
+    left: initial;
+    width: 50%;
+    height: initial;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  .underline-link-menu {
+    width: 75%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--white);
+    border-width: 0;
+  }
+
+  .header-title {
+    width: 300px;
+    margin: 90px 0 0 10%;
+    padding: 15px;
+  }
+
+  .section-interactive-vr {
+    position: relative;
+    text-align: left;
+    padding: 130px 10%;
+  }
+
+  .img-interactive-vr {
+    height: 350px;
+    width: 60%;
+    background-image: url(../images/desktop/image-interactive.jpg);
+  }
+
+  .section-interactive-vr .title {
+    margin-top: 0;
+  }
+
+  .section-interactive-vr .text-content {
+    position: absolute;
+    bottom: 130px;
+    right: 10%;
+    width: 40%;
+    padding-left: 60px;
+    padding-top: 60px;
+    background-color: var(--white);
+  }
+
+  .section-our-creations {
+    position: relative;
+    padding: 0 10% 130px 10%;
+  }
+
+  .section-our-creations .title {
+    margin: 0;
+    text-align: left;
+  }
+
+  .section-our-creations .images-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin-top: 60px;
+  }
+
+  .deep-earth,
+  .night-arcade,
+  .soccer-team,
+  .grid,
+  .from-above,
+  .pocket-borealis,
+  .curiosity,
+  .make-fisheye {
+    height: 500px;
+    margin: 0;
+    padding: 415px 0 0 10%;
+  }
+
+  .deep-earth {
+    background-image: url(../images/desktop/image-deep-earth.jpg);
+  }
+
+  .night-arcade {
+    background-image: url(../images/desktop/image-night-arcade.jpg);
+  }
+
+  .soccer-team {
+    background-image: url(../images/desktop/image-soccer-team.jpg);
+  }
+
+  .grid {
+    background-image: url(../images/desktop/image-grid.jpg);
+  }
+
+  .from-above {
+    background-image: url(../images/desktop/image-from-above.jpg);
+  }
+
+  .pocket-borealis {
+    background-image: url(../images/desktop/image-pocket-borealis.jpg);
+  }
+
+  .curiosity {
+    background-image: url(../images/desktop/image-curiosity.jpg);
+  }
+
+  .make-fisheye {
+    background-image: url(../images/desktop/image-fisheye.jpg);
+  }
+
+  .seeall-btn {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    margin: 0;
+    width: 10%;
+    padding: 8px 0;
+  }
+}
