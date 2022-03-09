@@ -55,6 +55,12 @@ header nav {
   justify-content: space-between;
   align-items: center;
   /*background-color: black;*/
+  transition-duration: 400ms all;
+}
+
+header nav.change-background {
+  background-color: var(--black);
+  /* animation: show-opacity-animation 400ms ease-in-out both; */
 }
 
 .nav-brand {
@@ -75,7 +81,20 @@ header nav {
   width: 28px;
   margin: 10px auto;
   background-color: var(--white);
-  border-radius: 2px;
+  border-radius: 3px;
+  transition-duration: 400ms;
+}
+
+.br-1.animation {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animation {
+  opacity: 0;
+}
+
+.br-3.animation {
+  transform: rotate(45deg) translate(-10px, -8px);
 }
 
 .nav-menu {
@@ -89,6 +108,21 @@ header nav {
   height: 100vh;
   background-color: black;
   opacity: 0;
+}
+
+.nav-menu.show-menu {
+  visibility: visible;
+  overflow: visible;
+  text-transform: uppercase;
+  animation: show-opacity-animation 300ms ease-in-out both;
+}
+
+.link-box {
+  margin: 15px 0;
+}
+
+.nav-menu a {
+  color: var(--dark-gray);
 }
 
 .header-title {
@@ -138,6 +172,7 @@ header nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: inset 0px 0px 64px 32px hsl(217, 28%, 12%);
 }
 
 .deep-earth {
@@ -179,7 +214,6 @@ header nav {
   padding: 8px 0;
   border: 1px solid;
   background-color: transparent;
-  
 }
 
 .section-footer {
@@ -211,11 +245,26 @@ header nav {
 }
 
 .links-social i {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .copyright {
   color: var(--dark-gray);
+}
+
+.underline-hover {
+  width: 15px;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--white);
+  border-width: 0;
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+.link-box:hover .underline-hover {
+  opacity: 1;
 }
 
 @media (min-width: 1024px) {
@@ -257,23 +306,12 @@ header nav {
     opacity: 1;
   }
 
+  .link-box {
+    margin: 0;
+  }
+
   .nav-menu a {
     color: var(--white);
-  }
-
-  .underline-hover {
-    width: 15px;
-    height: 2px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--white);
-    border-width: 0;
-    opacity: 0;
-    transition-duration: 500ms;
-  }
-
-  .link-box:hover .underline-hover {
-    opacity: 1;
   }
 
   .header-title {
@@ -329,7 +367,7 @@ header nav {
     position: relative;
     height: 500px;
     margin: 0;
-    padding: 415px 0 0 10%;
+    padding: 425px 0 0 10%;
   }
 
   .our-creations-img::after {
@@ -349,8 +387,9 @@ header nav {
   }
 
   .our-creations-link:hover .our-creations-img-text {
+    position: relative;
     color: var(--black);
-    z-index: 3;
+    z-index: 1;
   }
 
   .deep-earth {
@@ -435,5 +474,14 @@ header nav {
 
   .copyright {
     text-align: right;
+  }
+}
+
+@keyframes show-opacity-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
